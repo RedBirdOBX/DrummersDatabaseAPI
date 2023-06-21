@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrummersDatabaseAPI.Dtos</name>
+    </assembly>
+    <members>
+        <member name="T:DrummersDatabaseAPI.Dtos.CategoryDto">
+            <summary>
+            Category with SubCategories
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.CategoryDto.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Id">
+            <summary>
+            category id
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.CategoryGuid">
+            <summary>
+            category guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Name">
+            <summary>
+            category name
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Image">
+            <summary>
+            image for category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Counter">
+            <summary>
+            counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Active">
+            <summary>
+            Counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.Created">
+            <summary>
+            created date
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.SubCategories">
+            <summary>
+            list of sub categories
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryDto.TotalSubCategories">
+            <summary>
+            count of sub categories
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto">
+            <summary>
+            Category Without SubCategories
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Id">
+            <summary>
+            Id of Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.CategoryGuid">
+            <summary>
+            Guid of Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Name">
+            <summary>
+            Name of Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Image">
+            <summary>
+             Img used for Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Counter">
+            <summary>
+            counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Active">
+            <summary>
+            Counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryWithoutSubCategoriesDto.Created">
+            <summary>
+            created date
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.CategoryCreateDto">
+            <summary>
+            Dto for creating Category
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.CategoryCreateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryCreateDto.CategoryGuid">
+            <summary>
+            Category Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryCreateDto.Name">
+            <summary>
+            Category Name
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryCreateDto.Image">
+            <summary>
+            Category Image
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryCreateDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.EntryCreateDto">
+            <summary>
+            Dto for creating Entry
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.EntryCreateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.EntryGuid">
+            <summary>
+            Entry Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.SubCategoryId">
+            <summary>
+            SubCategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.SubCategoryGuid">
+            <summary>
+            SubCategory Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.Name">
+            <summary>
+            Name of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.Description">
+            <summary>
+            Description of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.Url">
+            <summary>
+            Url for Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.Image">
+            <summary>
+            Image of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryCreateDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto">
+            <summary>
+            Dto for creating SubCategory
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.SubCategoryGuid">
+            <summary>
+            Guid for SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.CategoryId">
+            <summary>
+            CategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.CategoryGuid">
+            <summary>
+            Category Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.Name">
+            <summary>
+            Name of SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.Image">
+            <summary>
+            SubCategory Image
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryCreateDto.Active">
+            <summary>
+            Active flag
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.EntryDto">
+            <summary>
+            Entry Dto
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.EntryDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Id">
+            <summary>
+            Id of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.EntryGuid">
+            <summary>
+            Guid for Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.SubCategoryId">
+            <summary>
+            SubcategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.SubCategoryGuid">
+            <summary>
+            SubCategory Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Name">
+            <summary>
+            Name of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Description">
+            <summary>
+            Description of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Url">
+            <summary>
+            Url of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Image">
+            <summary>
+            Image for Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Counter">
+            <summary>
+            counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Active">
+            <summary>
+            Counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryDto.Created">
+            <summary>
+            created date
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.LinkDto">
+            <summary>
+            link type to be included in responses
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.LinkDto.Href">
+            <summary>
+            the uri of the resource
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.LinkDto.Rel">
+            <summary>
+            the responsibility of the uri
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.LinkDto.Method">
+            <summary>
+            the type of request to be made
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.LinkDto.#ctor(System.String,System.String,System.String)">
+            <summary>
+            constructor
+            </summary>
+            <param name="href">uri to return</param>
+            <param name="rel">responsibility of uri</param>
+            <param name="method">type of request</param>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.LinkedResourcesDto">
+            <summary>
+            class ti be inherited by resource dtos
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.LinkedResourcesDto.Links">
+            <summary>
+            links to be added to resource dtos
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.LinkedResourcesDto.#ctor">
+            <summary>
+             constructor
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.SubCategoryDto">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.SubCategoryDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Id">
+            <summary>
+            SubCategory Id
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.SubCategoryGuid">
+            <summary>
+            SubCategory Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.CategoryId">
+            <summary>
+            CategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.CategoryGuid">
+            <summary>
+            Category Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Name">
+            <summary>
+            Name of SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Image">
+            <summary>
+            Image of SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Counter">
+            <summary>
+            counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Active">
+            <summary>
+            Counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Created">
+            <summary>
+            created date
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.Entries">
+            <summary>
+            Entries for SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryDto.TotalEntries">
+            <summary>
+            Number of Entries for SubCategory
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto">
+            <summary>
+            SubCategoryWithoutEntriesDto
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Id">
+            <summary>
+            SubCategory Id
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.SubCategoryGuid">
+            <summary>
+            SubCategory Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.CategoryId">
+            <summary>
+            Category Id
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.CategoryGuid">
+            <summary>
+            Category Guid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Name">
+            <summary>
+            SubCategory Name
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Image">
+            <summary>
+            Image of SubCategory
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Counter">
+            <summary>
+            Counter of times clicked
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryWithoutEntriesDto.Created">
+            <summary>
+            Created Date
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.CategoryUpdateDto">
+            <summary>
+            Dto for updating Category
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.CategoryUpdateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryUpdateDto.Name">
+            <summary>
+            Name of Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryUpdateDto.Image">
+            <summary>
+            Image of Category
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.CategoryUpdateDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.EntryUpdateDto">
+            <summary>
+            Dto to update Entry
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.EntryUpdateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.SubCategoryId">
+            <summary>
+            SubCategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.SubCategoryGuid">
+            <summary>
+            SubCategoryGuid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.Name">
+            <summary>
+            Name of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.Description">
+            <summary>
+            Description of Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.Url">
+            <summary>
+            Url for Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.Image">
+            <summary>
+            Image for Entry
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.EntryUpdateDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto">
+            <summary>
+            Dto to update SubCategory
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.CategoryId">
+            <summary>
+            CategoryId
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.CategoryGuid">
+            <summary>
+            CategoryGuid
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.Name">
+            <summary>
+            SubCategory Name
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.Image">
+            <summary>
+            SubCategory Image
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto.Active">
+            <summary>
+            Active Flag
+            </summary>
+        </member>
+    </members>
+</doc>

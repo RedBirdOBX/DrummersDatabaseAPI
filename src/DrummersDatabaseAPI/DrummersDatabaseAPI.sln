@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrummersDatabaseAPI.Web", "DrummersDatabaseAPI.Web\DrummersDatabaseAPI.Web.csproj", "{4CC0338D-2E61-418C-934D-D915F14EE6CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrummersDatabaseAPI.Dtos", "DrummersDatabaseAPI.Dtos\DrummersDatabaseAPI.Dtos.csproj", "{51E71CA2-0667-404D-BAC1-056B780011A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrummersDatabaseAPI.Data", "DrummersDatabaseAPI.Data\DrummersDatabaseAPI.Data.csproj", "{94682882-C4AD-4EF2-9998-37D11D3CA638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{2BF19C7D-4B1D-478C-989A-50F3BABD8390}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\README.md = Docs\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrummersDatabaseAPI.Service", "DrummersDatabaseAPI.Service\DrummersDatabaseAPI.Service.csproj", "{F0676A43-833F-4CE7-9A0C-D3818684FDFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrummersDatabaseAPI.Test", "DrummersDatabaseAPI.Test\DrummersDatabaseAPI.Test.csproj", "{A2FD4F79-C633-4F5E-8007-029FD8684CE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{E64BB35A-C573-4717-937D-44DA549889F4}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\SqlScripts\create-categories-tbl.sql = Docs\SqlScripts\create-categories-tbl.sql
+		Docs\SqlScripts\create-entries-tbl.sql = Docs\SqlScripts\create-entries-tbl.sql
+		Docs\SqlScripts\create-logs-tbl.sql = Docs\SqlScripts\create-logs-tbl.sql
+		Docs\SqlScripts\create-subcategories-tbl.sql = Docs\SqlScripts\create-subcategories-tbl.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CC0338D-2E61-418C-934D-D915F14EE6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC0338D-2E61-418C-934D-D915F14EE6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC0338D-2E61-418C-934D-D915F14EE6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC0338D-2E61-418C-934D-D915F14EE6CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E71CA2-0667-404D-BAC1-056B780011A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E71CA2-0667-404D-BAC1-056B780011A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E71CA2-0667-404D-BAC1-056B780011A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E71CA2-0667-404D-BAC1-056B780011A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94682882-C4AD-4EF2-9998-37D11D3CA638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94682882-C4AD-4EF2-9998-37D11D3CA638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94682882-C4AD-4EF2-9998-37D11D3CA638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94682882-C4AD-4EF2-9998-37D11D3CA638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0676A43-833F-4CE7-9A0C-D3818684FDFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0676A43-833F-4CE7-9A0C-D3818684FDFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0676A43-833F-4CE7-9A0C-D3818684FDFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0676A43-833F-4CE7-9A0C-D3818684FDFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FD4F79-C633-4F5E-8007-029FD8684CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FD4F79-C633-4F5E-8007-029FD8684CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FD4F79-C633-4F5E-8007-029FD8684CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FD4F79-C633-4F5E-8007-029FD8684CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E64BB35A-C573-4717-937D-44DA549889F4} = {2BF19C7D-4B1D-478C-989A-50F3BABD8390}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38565485-14EC-4F2E-8AB1-601A6285785F}
+	EndGlobalSection
+EndGlobal

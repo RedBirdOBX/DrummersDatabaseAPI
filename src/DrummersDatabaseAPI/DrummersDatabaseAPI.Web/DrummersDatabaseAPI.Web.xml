@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrummersDatabaseAPI.Web</name>
+    </assembly>
+    <members>
+        <member name="T:DrummersDatabaseAPI.Web.Controllers.AuthenticationController">
+            <summary>
+            controller for getting token
+            https://app.pluralsight.com/course-player?clipId=efe6c29c-8d59-4b02-94fc-20e3485d33ba
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.AuthenticationController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILogger{DrummersDatabaseAPI.Web.Controllers.AuthenticationController})">
+            <summary>
+            constructor
+            </summary>
+            <param name="configuration"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.AuthenticationController.GetToken(DrummersDatabaseAPI.Web.Authentication.AuthenticationRequestBody)">
+            <summary>
+            gives token to client if authorized
+            </summary>
+            <param name="request"></param>
+            <returns>token as string</returns>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.AuthenticationController.GetValidUser(DrummersDatabaseAPI.Web.Authentication.AuthenticationRequestBody)">
+            <summary>
+            returns the valid user based on data from request
+            </summary>
+            <param name="request"></param>
+            <returns>ApiUser</returns>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Web.Controllers.CategoriesController">
+            <summary>
+            CategoriesController
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.#ctor(DrummersDatabaseAPI.Service.ICategoryProcessor,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{DrummersDatabaseAPI.Web.Controllers.CategoriesController})">
+            <summary>
+            CategoriesController constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="mapper"></param>
+            <param name="processor"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.GetCategories(System.Boolean)">
+            <summary>
+            lists all categories
+            </summary>
+            <returns>collection of CategoryWithoutSubCategoriesDto</returns>
+            <example>{baseUrl}/api/categories</example>
+            <param name="showAll">flag to show both inactive and active</param>
+            <response code="200">returns collection of categories</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.GetCategory(System.Int32,System.Boolean)">
+            <summary>
+            returns single category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="includeSubCategories"></param>
+            <returns>CategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}?includeSubCategories={bool}</example>
+            <response code="200">returns requested category</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.CreateCategory(DrummersDatabaseAPI.Dtos.CategoryCreateDto)">
+            <summary>
+            creates new category
+            </summary>
+            <param name="input"></param>
+            <returns>newly created CategoryDto</returns>
+            <example>{baseUrl}/api/categories</example>
+            <response code="201">category created</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.UpdateCategory(System.Int32,DrummersDatabaseAPI.Dtos.CategoryUpdateDto)">
+            <summary>
+            updates category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns>updated CategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}</example>
+            <response code="200">category updated</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.PatchCategory(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.CategoryUpdateDto})">
+            <summary>
+            Allows for patch updates on category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="patchDocument"></param>
+            <returns>CategoryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}</example>
+            <response code="200"> category patched</response>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Web.Controllers.EntriesController">
+            <summary>
+            EntriesController
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.#ctor(Microsoft.Extensions.Logging.ILogger{DrummersDatabaseAPI.Web.Controllers.EntriesController},DrummersDatabaseAPI.Web.Services.IMailService,DrummersDatabaseAPI.Service.ICategoryProcessor,DrummersDatabaseAPI.Service.ISubCategoryProcessor,DrummersDatabaseAPI.Service.IEntryProcessor,AutoMapper.IMapper)">
+            <summary>
+            EntriesController constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="mailService"></param>
+            <param name="categoryProcessor"></param>
+            <param name="subCategoryProcessor"></param>
+            <param name="entryProcessor"></param>
+            <param name="mapper"></param>
+            /// <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.GetEntries(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            returns collection of EntryDtos
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="filter"></param>
+            <returns>collection of EntryDtos</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries</example>
+            <response code="200">collection of entries</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.GetEntry(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            returns EntryDto
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <returns>EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+            <response code="200">entry</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.CreateEntry(System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.EntryCreateDto)">
+            <summary>
+            creates new EntryDto
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="input"></param>
+            <returns>newly created EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries</example>
+            <response code="201">created entry</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.UpdateEntry(System.Int32,System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.EntryUpdateDto)">
+            <summary>
+            Updates entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns>updated EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+            <response code="200">updated entry</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.PatchEntry(System.Int32,System.Int32,System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.EntryUpdateDto})">
+            <summary>
+            Allows for patch updates on entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <param name="patchDocument"></param>
+            <returns>EntryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+            <response code="200">patched entry</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.DeleteEntry(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            deletes entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+            <response code="204">patched entry</response>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Web.Controllers.FilesController">
+            <summary>
+            Files controller
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.FilesController.#ctor(Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider,Microsoft.Extensions.Logging.ILogger{DrummersDatabaseAPI.Web.Controllers.FilesController})">
+            <summary>
+            constructor
+            </summary>
+            <param name="fileExtensionContentTypeProvider"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.FilesController.GetFile(System.String)">
+            <summary>
+            streams requested file if found
+            </summary>
+            <param name="fileId"></param>
+            <returns>File</returns>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController">
+            <summary>
+            SubCategoriesController
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.#ctor(Microsoft.Extensions.Logging.ILogger{DrummersDatabaseAPI.Web.Controllers.SubCategoriesController},DrummersDatabaseAPI.Service.ICategoryProcessor,DrummersDatabaseAPI.Service.ISubCategoryProcessor,AutoMapper.IMapper)">
+            <summary>
+            SubCategoriesController constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="categoryProcessor"></param>
+            <param name="subCategoryProcessor"></param>
+            /// <param name="mapper"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.GetSubCategories(System.Int32,System.Boolean)">
+            <summary>
+            gets SubCategories
+            </summary>
+            <param name="categoryId"></param>
+            <param name="showAll"></param>
+            <returns>collection of SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories</example>
+            <response code="200">collection of sub categories</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.GetSubCategory(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Gets single SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="includeEntries"></param>
+            <returns>single SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}?includeEntries={bool}</example>
+            <response code="200">sub categories</response>
+            <response code="404">category / subcategory not found</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.CreateSubCategory(System.Int32,DrummersDatabaseAPI.Dtos.SubCategoryCreateDto)">
+            <summary>
+            Creates SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns>newly created SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories</example>
+            <response code="201">sub categories created</response>
+            <response code="404">category / subcategory not found</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.UpdateSubCategory(System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto)">
+            <summary>
+            Updates SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="input"></param>
+            <returns>updated SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}</example>
+            <response code="200">sub categories created</response>
+            <response code="404">category / subcategory not found</response>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.PatchSubCategory(System.Int32,System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto})">
+            <summary>
+            Allows for patch updates on subcategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="patchDocument"></param>
+            <returns>SubCategoryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}</example>
+            <response code="200">sub categories created</response>
+            <response code="404">category / subcategory not found</response>
+        </member>
+        <member name="T:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData">
+            <summary>
+            data to return back in header of paged entry requests
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData.TotalItemCount">
+            <summary>
+            count of all avail entries
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData.TotalPageCount">
+            <summary>
+            calculation of all pages
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData.PageSize">
+            <summary>
+            Page size
+            </summary>
+        </member>
+        <member name="P:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData.CurrentPage">
+            <summary>
+            Current page
+            </summary>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.ResponseHeaders.PaginationMetaData.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="allCount"></param>
+            <param name="pageSize"></param>
+            <param name="pageNum"></param>
+        </member>
+    </members>
+</doc>

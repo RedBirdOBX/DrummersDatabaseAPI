@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "de7dbfb7-f019-4970-8126-cc18a56650f4",
+		"name": "Drummers Database API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3272469"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GET Categories",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODUwNDY2NTUsImV4cCI6MTY4NTA0ODQ1NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.jSSsNYEBSssj9H4fv6ZvUOcrKJ7SevN2Xg7S598WMPY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories?showall=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "showall",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Category",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODcyNjYxMzgsImV4cCI6MTY4NzI2NzkzOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.Avx8vIW5808hBuz-h4qsJJ1bitC0nPkDauaYPnI2-FA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2?includeSubcategories=false",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2"
+							],
+							"query": [
+								{
+									"key": "includeSubcategories",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODM4MzYyNDEsImV4cCI6MTY4MzgzODA0MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.m1C-ZoV-BJGHludcnhNb6t9-DNUy6imQ6O76qy0aDGM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"New Category\",\r\n    \"image\": \"x.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODU2NTA0NjUsImV4cCI6MTY4NTY1MjI2NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xjctaJtBvS5gUkJdMKtamjjeUV9nVluvC7CET0W8BMY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manufacturers2\",\r\n    \"image\": \"xxxx.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Category",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNTc2NDIsImV4cCI6MTY4NDI1OTQ0MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.8eHSiTB8oMP6_xsFbNuKgNOkhiocmXu5rjIn9P-AdOs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\" : \"/name\",\r\n        \"value\": \"ManufacturersXX\"\r\n    }\r\n    \r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/url\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }\r\n\r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/foo\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }     \r\n\r\n    // {\r\n    //     \"op\": \"remove\",\r\n    //     \"path\" : \"/name\"\r\n    // }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SubCategories",
+			"item": [
+				{
+					"name": "GET SubCategories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNTg3MzcsImV4cCI6MTY4NDI2MDUzNywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.6dSHw1sSDHwW3rjAo7p-2htjGvJW5QirEYi92gF5gd8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories?showall=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories"
+							],
+							"query": [
+								{
+									"key": "showall",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET SubCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjUzMjUsImV4cCI6MTY4NDI2NzEyNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.hln7hJQ-OlfeTYNoFtmA0Axj9ynXzlWNJHylUWor9PA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1?includeEntries=false",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1"
+							],
+							"query": [
+								{
+									"key": "includeEntries",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE SubCategory",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjQxMDUsImV4cCI6MTY4NDI2NTkwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.ScfiNT4IeMq4YvmVL0GsWz5jsM1dbk38vGlN83T4mpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": 2,\r\n    \"categoryGuid\" : \"8793552e-23fd-4dd1-ab5d-78c3862c5ba9\",\r\n    \"name\": \"Heads\",\r\n    \"image\": \"x.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE SubCategory",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjQxMDUsImV4cCI6MTY4NDI2NTkwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.ScfiNT4IeMq4YvmVL0GsWz5jsM1dbk38vGlN83T4mpg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"categoryId\": 2,\r\n    \"categoryGuid\": \"8793552e-23fd-4dd1-ab5d-78c3862c5ba9\",\r\n    \"name\": \"Drums\",\r\n    \"image\": \"x.jpg\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH SubCategory",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjUzMjUsImV4cCI6MTY4NDI2NzEyNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.hln7hJQ-OlfeTYNoFtmA0Axj9ynXzlWNJHylUWor9PA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\" : \"/name\",\r\n        \"value\": \"Drums\"\r\n    }\r\n    \r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/url\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }\r\n\r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/foo\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }     \r\n\r\n    // {\r\n    //     \"op\": \"remove\",\r\n    //     \"path\" : \"/name\"\r\n    // }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Entries",
+			"item": [
+				{
+					"name": "GET Entries",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODU2NTA0NjUsImV4cCI6MTY4NTY1MjI2NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xjctaJtBvS5gUkJdMKtamjjeUV9nVluvC7CET0W8BMY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?showall=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "showall",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Entries w/ PageNum & PageSizeCopy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?page=40&size=5&showall=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "40"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "showall",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Entries Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?filter=ludwig",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "ludwig"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Entries Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODM2NjA3NTcsImV4cCI6MTY4MzY2MjU1NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.2up2fb8uNEidN1KSvU4Mpe8vIdjwA2sAl74qQsu-egQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?search=drums&showall=true",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "drums"
+								},
+								{
+									"key": "showall",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Entries Filter & Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?filter=Ludwig&search=Monroe",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "Ludwig"
+								},
+								{
+									"key": "search",
+									"value": "Monroe"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Entry",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0MzgyMTEsImV4cCI6MTY4NDQ0MDAxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.vBh23PkU08r1Oe8TdwZzNA78h7R0wXAzZL69CTUI53I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/13",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE Entry",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0Mzk2NjgsImV4cCI6MTY4NDQ0MTQ2OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.Nv-A6YscTLhTVl-4oz2s8iOXlBbK5P1OR2Z82ecQIFg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"01271bba-0100-4724-84a1-f809a107da4a\",\r\n    \"name\": \"FOO\",\r\n    \"description\": \"FOO Drums.\",\r\n    \"url\": \"\",\r\n    \"image\": \"x.jpg\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Entry",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0MzgyMTEsImV4cCI6MTY4NDQ0MDAxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.vBh23PkU08r1Oe8TdwZzNA78h7R0wXAzZL69CTUI53I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"01271bba-0100-4724-84a1-f809a107da4a\",\r\n    \"name\": \"Pearl...X.\",\r\n    \"description\": \"Pearl Drum....s\",\r\n    \"url\": \"\",\r\n    \"image\": \"xxxx.jpg\",\r\n    \"active\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Entry",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0Mzk2NjgsImV4cCI6MTY4NDQ0MTQ2OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.Nv-A6YscTLhTVl-4oz2s8iOXlBbK5P1OR2Z82ecQIFg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/17",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH Entry",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0MzgyMTEsImV4cCI6MTY4NDQ0MDAxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.vBh23PkU08r1Oe8TdwZzNA78h7R0wXAzZL69CTUI53I",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"op\": \"replace\",\r\n        \"path\" : \"/name\",\r\n        \"value\": \"Pearl\"\r\n    }\r\n\r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/url\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }\r\n\r\n    // {\r\n    //     \"op\": \"replace\",\r\n    //     \"path\" : \"/foo\",\r\n    //     \"value\": \"www.something.com\"\r\n    // }     \r\n\r\n    // {\r\n    //     \"op\": \"remove\",\r\n    //     \"path\" : \"/name\"\r\n    // }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7094",
+							"path": [
+								"api",
+								"categories",
+								"2",
+								"subcategories",
+								"1",
+								"entries",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET File",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODM1NzUwNTgsImV4cCI6MTY4MzU3Njg1OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.c3Q_818U5nJqyzKlfvXPMhqYu0jFvHkGPHbLRszmxOc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:7094/api/files/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7094",
+					"path": [
+						"api",
+						"files",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "A",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\" : \"DDBUser1\",\r\n    \"Password\" : \"Paradiddle\",\r\n    \"Resources\": \"entries\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7094/api/Authentication/GetToken",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7094",
+					"path": [
+						"api",
+						"Authentication",
+						"GetToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

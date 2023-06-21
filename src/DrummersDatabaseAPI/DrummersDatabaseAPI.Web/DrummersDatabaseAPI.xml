@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DrummersDatabaseAPI.Web</name>
+    </assembly>
+    <members>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.GetCategories">
+            <summary>
+            lists all categories
+            </summary>
+            <returns>collection of CategoryWithoutSubCategoriesDto</returns>
+            <example>{baseUrl}/api/categories</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.GetCategory(System.Int32,System.Boolean)">
+            <summary>
+            returns single category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="includeSubCategories"></param>
+            <returns>CategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}?includeSubCategories={bool}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.CreateCategory(DrummersDatabaseAPI.Dtos.CategoryCreateDto)">
+            <summary>
+            creates new category
+            </summary>
+            <param name="input"></param>
+            <returns>newly created CategoryDto</returns>
+            <example>{baseUrl}/api/categories</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.UpdateCategory(System.Int32,DrummersDatabaseAPI.Dtos.CategoryUpdateDto)">
+            <summary>
+            updates category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns>updated CategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.CategoriesController.PatchCategory(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.CategoryUpdateDto})">
+            <summary>
+            Allows for patch updates on category
+            </summary>
+            <param name="categoryId"></param>
+            <param name="patchDocument"></param>
+            <returns>CategoryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.GetEntries(System.Int32,System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            returns collection of EntryDtos
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="filter"></param>
+            <returns>collection of EntryDtos</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.GetEntry(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            returns EntryDto
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <returns>EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.CreateEntry(System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.EntryCreateDto)">
+            <summary>
+            creates new EntryDto
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="input"></param>
+            <returns>newly created EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.UpdateEntry(System.Int32,System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.EntryUpdateDto)">
+            <summary>
+            Updates entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <param name="input"></param>
+            <returns>updated EntryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.PatchEntry(System.Int32,System.Int32,System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.EntryUpdateDto})">
+            <summary>
+            Allows for patch updates on entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <param name="patchDocument"></param>
+            <returns>EntryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.EntriesController.DeleteEntry(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            deletes entry
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="entryId"></param>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}/entries/{entryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.GetSubCategories(System.Int32)">
+            <summary>
+            gets SubCategories
+            </summary>
+            <param name="categoryId"></param>
+            <returns>collection of SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.GetSubCategory(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Gets single SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="includeEntries"></param>
+            <returns>single SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}?includeEntries={bool}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.CreateSubCategory(System.Int32,DrummersDatabaseAPI.Dtos.SubCategoryCreateDto)">
+            <summary>
+            Creates SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns>newly created SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.UpdateSubCategory(System.Int32,System.Int32,DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto)">
+            <summary>
+            Updates SubCategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="input"></param>
+            <returns>updated SubCategoryDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}</example>
+        </member>
+        <member name="M:DrummersDatabaseAPI.Web.Controllers.SubCategoriesController.PatchSubCategory(System.Int32,System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{DrummersDatabaseAPI.Dtos.SubCategoryUpdateDto})">
+            <summary>
+            Allows for patch updates on subcategory
+            </summary>
+            <param name="categoryId"></param>
+            <param name="subCategoryId"></param>
+            <param name="patchDocument"></param>
+            <returns>SubCategoryUpdateDto</returns>
+            <example>{baseUrl}/api/categories/{categoryId}/subcategories/{subCategoryId}</example>
+        </member>
+    </members>
+</doc>
