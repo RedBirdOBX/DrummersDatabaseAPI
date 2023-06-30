@@ -13,7 +13,7 @@ namespace DrummersDatabaseAPI.Web.Controllers
     /// </summary>
     [Route("api/categories/{categoryId}/subcategories")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public class SubCategoriesController : ControllerBase

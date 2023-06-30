@@ -12,7 +12,7 @@ namespace DrummersDatabaseAPI.Service
 
         Task<CategoryWithoutSubCategoriesDto> UpdateCategoryAsync(int categoryId, CategoryUpdateDto category);
 
-        Task<bool> PatchCategoryAsync(CategoryUpdateDto input, int categoryId);
+        Task<bool> PatchCategoryAsync(int categoryId, CategoryUpdateDto input);
 
         Task<bool> DoesCategoryExistAsync(int categoryId);
     }

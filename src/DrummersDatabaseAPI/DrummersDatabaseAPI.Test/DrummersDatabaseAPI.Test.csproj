@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Moq" Version="4.18.4" />
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
@@ -20,6 +21,7 @@
     <ProjectReference Include="..\DrummersDatabaseAPI.Data\DrummersDatabaseAPI.Data.csproj" />
     <ProjectReference Include="..\DrummersDatabaseAPI.Dtos\DrummersDatabaseAPI.Dtos.csproj" />
     <ProjectReference Include="..\DrummersDatabaseAPI.Service\DrummersDatabaseAPI.Service.csproj" />
+    <ProjectReference Include="..\DrummersDatabaseAPI.Web\DrummersDatabaseAPI.Web.csproj" />
   </ItemGroup>
 
 </Project>

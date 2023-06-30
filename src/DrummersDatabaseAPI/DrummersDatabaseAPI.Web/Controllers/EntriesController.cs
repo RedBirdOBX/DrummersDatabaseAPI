@@ -249,7 +249,7 @@ namespace DrummersDatabaseAPI.Web.Controllers
                     return NotFound($"entry {entryId} not found.");
                 }
 
-                var updatedEntry = await _entryProcessor.UpdateEntryAsync(input, entryId); ;
+                var updatedEntry = await _entryProcessor.UpdateEntryAsync(entryId, input); ;
                 var results = Ok(updatedEntry);
                 return results;
             }
@@ -324,7 +324,7 @@ namespace DrummersDatabaseAPI.Web.Controllers
                 // map the source update dto to then entity / destination
                 _mapper.Map(entryToPatch, entry);
 
-                bool success = await _entryProcessor.PatchEntryAsync(entryToPatch, entryId);
+                bool success = await _entryProcessor.PatchEntryAsync(entryId, entryToPatch);
                 if (!success)
                 {
                     return StatusCode(500, "An application error occurred while updating the entry.");

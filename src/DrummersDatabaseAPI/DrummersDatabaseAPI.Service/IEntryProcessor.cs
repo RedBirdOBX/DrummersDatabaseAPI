@@ -12,9 +12,9 @@ namespace DrummersDatabaseAPI.Service
 
         Task<EntryDto> CreateEntryAsync(EntryCreateDto input, SubCategoryDto subCategory);
 
-        Task<EntryDto> UpdateEntryAsync(EntryUpdateDto input, int entryId);
+        Task<EntryDto> UpdateEntryAsync(int entryId, EntryUpdateDto input);
 
-        Task<bool> PatchEntryAsync(EntryUpdateDto input, int entryId);
+        Task<bool> PatchEntryAsync(int entryId, EntryUpdateDto input);
 
         Task<bool> DeleteEntryAsync(int entryId);
 

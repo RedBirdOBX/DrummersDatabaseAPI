@@ -91,7 +91,7 @@ namespace DrummersDatabaseAPI.Service
             }
         }
 
-        public async Task<EntryDto> UpdateEntryAsync(EntryUpdateDto input, int entryId)
+        public async Task<EntryDto> UpdateEntryAsync(int entryId, EntryUpdateDto input)
         {
             try
             {
@@ -114,7 +114,7 @@ namespace DrummersDatabaseAPI.Service
             }
         }
 
-        public async Task<bool> PatchEntryAsync(EntryUpdateDto input, int entryId)
+        public async Task<bool> PatchEntryAsync(int entryId, EntryUpdateDto input)
         {
             try
             {

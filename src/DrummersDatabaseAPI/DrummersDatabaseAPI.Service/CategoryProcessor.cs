@@ -100,7 +100,7 @@ namespace DrummersDatabaseAPI.Service
             }
         }
 
-        public async Task<bool> PatchCategoryAsync(CategoryUpdateDto input, int categoryId)
+        public async Task<bool> PatchCategoryAsync(int categoryId, CategoryUpdateDto input)
         {
             try
             {

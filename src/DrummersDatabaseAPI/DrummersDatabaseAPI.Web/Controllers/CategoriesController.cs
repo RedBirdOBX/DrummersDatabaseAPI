@@ -189,7 +189,7 @@ namespace DrummersDatabaseAPI.Web.Controllers
                     return BadRequest(ModelState);
                 }
 
-                bool success = await _processor.PatchCategoryAsync(categoryToPatch, categoryId);
+                bool success = await _processor.PatchCategoryAsync(categoryId, categoryToPatch);
                 if (!success)
                 {
                     return StatusCode(500, "An application error occurred while updating the entry.");
