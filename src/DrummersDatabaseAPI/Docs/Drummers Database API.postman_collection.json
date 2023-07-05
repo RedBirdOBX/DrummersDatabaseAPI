@@ -26,19 +26,16 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODUwNDY2NTUsImV4cCI6MTY4NTA0ODQ1NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.jSSsNYEBSssj9H4fv6ZvUOcrKJ7SevN2Xg7S598WMPY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories?showall=true",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories?showall=true",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories"
 							],
 							"query": [
@@ -58,21 +55,18 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODcyNjYxMzgsImV4cCI6MTY4NzI2NzkzOCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.Avx8vIW5808hBuz-h4qsJJ1bitC0nPkDauaYPnI2-FA",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2?includeSubcategories=false",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1?includeSubcategories=false",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2"
+								"1"
 							],
 							"query": [
 								{
@@ -96,13 +90,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODM4MzYyNDEsImV4cCI6MTY4MzgzODA0MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.m1C-ZoV-BJGHludcnhNb6t9-DNUy6imQ6O76qy0aDGM",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODc0NDQ0NzcsImV4cCI6MTY4NzQ0NjI3NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.juGhN8N96I_oLbAZkGjJIIsyBIcHLk4VnK2ZzCdDIn0",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"New Category\",\r\n    \"image\": \"x.jpg\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Manufacturers2\",\r\n    \"image\": \"manufacturers.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -110,14 +104,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories"
 							]
 						}
@@ -150,16 +141,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -191,16 +179,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -218,28 +203,19 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNTg3MzcsImV4cCI6MTY4NDI2MDUzNywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.6dSHw1sSDHwW3rjAo7p-2htjGvJW5QirEYi92gF5gd8",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories?showall=true",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories"
-							],
-							"query": [
-								{
-									"key": "showall",
-									"value": "true"
-								}
 							]
 						}
 					},
@@ -252,28 +228,25 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjUzMjUsImV4cCI6MTY4NDI2NzEyNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.hln7hJQ-OlfeTYNoFtmA0Axj9ynXzlWNJHylUWor9PA",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1?includeEntries=false",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1?includeEntries=true",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1"
 							],
 							"query": [
 								{
 									"key": "includeEntries",
-									"value": "false"
+									"value": "true"
 								}
 							]
 						}
@@ -292,13 +265,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQyNjQxMDUsImV4cCI6MTY4NDI2NTkwNSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.ScfiNT4IeMq4YvmVL0GsWz5jsM1dbk38vGlN83T4mpg",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryId\": 2,\r\n    \"categoryGuid\" : \"8793552e-23fd-4dd1-ab5d-78c3862c5ba9\",\r\n    \"name\": \"Heads\",\r\n    \"image\": \"x.jpg\"\r\n}",
+							"raw": "{\r\n    \"categoryId\": 1,\r\n    \"categoryGuid\" : \"d40a3677-1d5d-4728-8e4b-9837461309db\",\r\n    \"name\": \"Drums\",\r\n    \"image\": \"drums.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -306,16 +279,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories"
 							]
 						}
@@ -348,16 +318,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1"
 							]
@@ -391,16 +358,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1"
 							]
@@ -420,21 +384,18 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODU2NTA0NjUsImV4cCI6MTY4NTY1MjI2NSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xjctaJtBvS5gUkJdMKtamjjeUV9nVluvC7CET0W8BMY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?showall=true",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?showall=true",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
@@ -453,18 +414,21 @@
 					"name": "GET Entries w/ PageNum & PageSizeCopy",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?page=40&size=5&showall=true",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?page=40&size=5&showall=true",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
@@ -491,18 +455,21 @@
 					"name": "GET Entries Filter",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?filter=ludwig",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?filter=ludwig",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
@@ -511,6 +478,11 @@
 								{
 									"key": "filter",
 									"value": "ludwig"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTk2OTEsImV4cCI6MTY4ODUwMTQ5MSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.OauHiQdOOidBXQNqiA4ldX37Z8i0a1kKyh28rsvDkZ4",
+									"disabled": true
 								}
 							]
 						}
@@ -524,21 +496,18 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODM2NjA3NTcsImV4cCI6MTY4MzY2MjU1NywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.2up2fb8uNEidN1KSvU4Mpe8vIdjwA2sAl74qQsu-egQ",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?search=drums&showall=true",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?search=drums&showall=true",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
@@ -561,18 +530,21 @@
 					"name": "GET Entries Filter & Search",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries?filter=Ludwig&search=Monroe",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?filter=Ludwig&search=Monroe",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
@@ -604,7 +576,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0MzgyMTEsImV4cCI6MTY4NDQ0MDAxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.vBh23PkU08r1Oe8TdwZzNA78h7R0wXAzZL69CTUI53I",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
@@ -618,20 +590,17 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/13",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries",
-								"13"
+								"1"
 							]
 						}
 					},
@@ -649,13 +618,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0Mzk2NjgsImV4cCI6MTY4NDQ0MTQ2OCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.Nv-A6YscTLhTVl-4oz2s8iOXlBbK5P1OR2Z82ecQIFg",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"01271bba-0100-4724-84a1-f809a107da4a\",\r\n    \"name\": \"FOO\",\r\n    \"description\": \"FOO Drums.\",\r\n    \"url\": \"\",\r\n    \"image\": \"x.jpg\",\r\n    \"active\": true\r\n}",
+							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"dc80fd9e-dd92-40a8-aeae-ac7f1ff79c70\",\r\n    \"name\": \"Ludwig Drums\",\r\n    \"description\": \"Pearl Drums - The Most Famous Name on Drums.\",\r\n    \"url\": \"www.ludwig-drums.com\",\r\n    \"image\": \"ludwig.jpg\",\r\n    \"active\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -663,19 +632,26 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?filter=ludwig&Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "ludwig"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY"
+								}
 							]
 						}
 					},
@@ -693,13 +669,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlYWI5MWE2OC0zOWZjLTQ1NGEtYmFjMC02ZjIwMTRmOGQ0ODUiLCJ1c2VyTmFtZSI6InVzZXIiLCJyZXNvdXJjZXMiOiJhbGwiLCJuYmYiOjE2ODQ0MzgyMTEsImV4cCI6MTY4NDQ0MDAxMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.vBh23PkU08r1Oe8TdwZzNA78h7R0wXAzZL69CTUI53I",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"01271bba-0100-4724-84a1-f809a107da4a\",\r\n    \"name\": \"Pearl...X.\",\r\n    \"description\": \"Pearl Drum....s\",\r\n    \"url\": \"\",\r\n    \"image\": \"xxxx.jpg\",\r\n    \"active\": false\r\n}",
+							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"e52bd145-c389-46f1-8ef7-2949a941265d\",\r\n    \"name\": \"Pearl.\",\r\n    \"description\": \"Pearl Drums - the best reason to play drums.\",\r\n    \"url\": \"www.pearldrum.com\",\r\n    \"image\": \"pearl.jpg\",\r\n    \"active\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -707,16 +683,13 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/1",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
-								"2",
+								"1",
 								"subcategories",
 								"1",
 								"entries",
@@ -752,14 +725,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/17",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/2/subcategories/1/entries/17",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
 								"2",
 								"subcategories",
@@ -797,14 +767,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://localhost:7094/api/categories/2/subcategories/1/entries/1",
-							"protocol": "https",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/2/subcategories/1/entries/1",
 							"host": [
-								"localhost"
+								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
-							"port": "7094",
 							"path": [
-								"api",
 								"categories",
 								"2",
 								"subcategories",
@@ -830,14 +797,11 @@
 					}
 				],
 				"url": {
-					"raw": "https://localhost:7094/api/files/2",
-					"protocol": "https",
+					"raw": "{{DrummersDatabaseAPIBaseUrl}}api/files/2",
 					"host": [
-						"localhost"
+						"{{DrummersDatabaseAPIBaseUrl}}api"
 					],
-					"port": "7094",
 					"path": [
-						"api",
 						"files",
 						"2"
 					]
@@ -867,14 +831,11 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:7094/api/Authentication/GetToken",
-					"protocol": "https",
+					"raw": "{{DrummersDatabaseAPIBaseUrl}}api/Authentication/GetToken",
 					"host": [
-						"localhost"
+						"{{DrummersDatabaseAPIBaseUrl}}api"
 					],
-					"port": "7094",
 					"path": [
-						"api",
 						"Authentication",
 						"GetToken"
 					]
