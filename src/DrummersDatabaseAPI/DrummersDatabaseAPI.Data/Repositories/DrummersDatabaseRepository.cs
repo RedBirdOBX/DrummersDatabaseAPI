@@ -117,7 +117,8 @@ namespace DrummersDatabaseAPI.Data.Repositories
                 entries = entries.Where(e => e.Active == true);
             }
 
-            var results = await entries.OrderBy(e => e.Name)
+            var results = await entries.Where(e => e.SubCategoryId == subCategoryId)
+                                        .OrderBy(e => e.Name)
                                         .Skip(pageSize * (pageNum - 1))
                                         .Take(pageSize)
                                         .ToListAsync();

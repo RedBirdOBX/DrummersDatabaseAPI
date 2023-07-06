@@ -203,7 +203,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg2NzQxNjAsImV4cCI6MTY4ODY3NTk2MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.wwyXwkv6n7cfWqFEuzDc6dZSWjyTjcXA3F5XGPMrrpk",
 								"type": "text"
 							}
 						],
@@ -265,13 +265,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg2NzQxNjAsImV4cCI6MTY4ODY3NTk2MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.wwyXwkv6n7cfWqFEuzDc6dZSWjyTjcXA3F5XGPMrrpk",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"categoryId\": 1,\r\n    \"categoryGuid\" : \"d40a3677-1d5d-4728-8e4b-9837461309db\",\r\n    \"name\": \"Drums\",\r\n    \"image\": \"drums.jpg\"\r\n}",
+							"raw": "{\r\n    \"categoryId\": 1,\r\n    \"categoryGuid\" : \"d40a3677-1d5d-4728-8e4b-9837461309db\",\r\n    \"name\": \"Electronic Drums\",\r\n    \"image\": \"e-drums.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -384,12 +384,12 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg2NzQ0NTMsImV4cCI6MTY4ODY3NjI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.VwdObc1-BmR1J-Cbn5ngp1S7PqGcSm9egA__5vGuGnk",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?showall=true",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/2/entries?showall=true",
 							"host": [
 								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
@@ -397,7 +397,7 @@
 								"categories",
 								"1",
 								"subcategories",
-								"1",
+								"2",
 								"entries"
 							],
 							"query": [
@@ -618,13 +618,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg2NzQ0NTMsImV4cCI6MTY4ODY3NjI1MywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.VwdObc1-BmR1J-Cbn5ngp1S7PqGcSm9egA__5vGuGnk",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"dc80fd9e-dd92-40a8-aeae-ac7f1ff79c70\",\r\n    \"name\": \"Ludwig Drums\",\r\n    \"description\": \"Pearl Drums - The Most Famous Name on Drums.\",\r\n    \"url\": \"www.ludwig-drums.com\",\r\n    \"image\": \"ludwig.jpg\",\r\n    \"active\": true\r\n}",
+							"raw": "{\r\n    \"subCategoryId\": 2,\r\n    \"subCategoryGuid\": \"d40a3677-1d5d-4728-8e4b-9837461309db\",\r\n    \"name\": \"Roland\",\r\n    \"description\": \"Industry leader in electronic drums.\",\r\n    \"url\": \"www.roland.com/us/categories/drums_percussion/v-drums_kits\",\r\n    \"image\": \"roland.jpg\",\r\n    \"active\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -632,7 +632,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries?filter=ludwig&Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/2/entries",
 							"host": [
 								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
@@ -640,17 +640,19 @@
 								"categories",
 								"1",
 								"subcategories",
-								"1",
+								"2",
 								"entries"
 							],
 							"query": [
 								{
-									"key": "filter",
-									"value": "ludwig"
+									"key": "showall",
+									"value": "true",
+									"disabled": true
 								},
 								{
 									"key": "Authorization",
-									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY"
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg0OTg2NzIsImV4cCI6MTY4ODUwMDQ3MiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.1EESMUJwKZmE68NWxgcx7AwOk4YfDGkcZ0UI69PRcuY",
+									"disabled": true
 								}
 							]
 						}
@@ -669,13 +671,13 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1MDMwMTYsImV4cCI6MTY4ODUwNDgxNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9.xUPLXN2r3iTnHQTxvw5zXdNEKtz1wZlPz3vdpPao1GA",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidXNlck5hbWUiOiJEREJVc2VyMSIsInJlc291cmNlcyI6ImVudHJpZXMiLCJuYmYiOjE2ODg1NzE2MDcsImV4cCI6MTY4ODU3MzQwNywiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDk0IiwiYXVkIjoiRHJ1bW1lcnNEYXRhYmFzZUFQSSJ9._wj_3F97bINW-fPYdefRVJIAj7zpoUo7e0FjPbZaY4w",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"e52bd145-c389-46f1-8ef7-2949a941265d\",\r\n    \"name\": \"Pearl.\",\r\n    \"description\": \"Pearl Drums - the best reason to play drums.\",\r\n    \"url\": \"www.pearldrum.com\",\r\n    \"image\": \"pearl.jpg\",\r\n    \"active\": true\r\n}",
+							"raw": "{\r\n    \"subCategoryId\": 1,\r\n    \"subCategoryGuid\": \"dc80fd9e-dd92-40a8-aeae-ac7f1ff79c70\",\r\n    \"name\": \"Pearl\",\r\n    \"description\": \"Ludwig Drums - The Most Famous Name on Drums.\",\r\n    \"url\": \"www.ludwig-drums.com\",\r\n    \"image\": \"ludwig.jpg\",\r\n    \"active\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -683,7 +685,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries/1",
+							"raw": "{{DrummersDatabaseAPIBaseUrl}}api/categories/1/subcategories/1/entries/2",
 							"host": [
 								"{{DrummersDatabaseAPIBaseUrl}}api"
 							],
@@ -693,7 +695,7 @@
 								"subcategories",
 								"1",
 								"entries",
-								"1"
+								"2"
 							]
 						}
 					},
