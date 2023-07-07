@@ -41,13 +41,13 @@ public class EntryUpdateDto
     /// Description of Entry
     /// </summary>
     [Required(ErrorMessage = $"{nameof(Description)} is required")]
-    [MaxLength(100, ErrorMessage = $"Max length for is {nameof(Description)} 100.")]
+    [MaxLength(500, ErrorMessage = $"Max length for is {nameof(Description)} 500.")]
     public string Description { get; set; }
 
     /// <summary>
     /// Url for Entry
     /// </summary>
-    [MaxLength(500, ErrorMessage = $"Max length for is {nameof(Url)} 500.")]
+    [MaxLength(100, ErrorMessage = $"Max length for is {nameof(Url)} 100.")]
     public string Url { get; set; }
 
     /// <summary>
