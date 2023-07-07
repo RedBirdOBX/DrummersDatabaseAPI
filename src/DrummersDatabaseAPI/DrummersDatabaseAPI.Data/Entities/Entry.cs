@@ -30,6 +30,8 @@ namespace DrummersDatabaseAPI.Data.Entities
         [MaxLength(ErrorMessage = $"Max length for is {nameof(Url)} 500.")]
         public string Url { get; set; }
 
+        public string Image { get; set; }
+
         public bool Active { get; set; }
 
         public int Counter { get; set; }
