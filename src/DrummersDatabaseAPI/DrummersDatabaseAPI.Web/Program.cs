@@ -100,6 +100,10 @@ builder.Services.AddScoped<IEntryProcessor, EntryProcessor>();
 // sets content type to return based on file extension of file.
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
+// https://learn.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-6.0
+builder.Services.AddHealthChecks();
+
+
 // auto-mapper
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -176,5 +180,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
+app.MapHealthChecks("/api/health");
 
 app.Run();
