@@ -180,6 +180,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
-app.MapHealthChecks("/healthx");
+app.MapHealthChecks("/api/health");
 
 app.Run();
